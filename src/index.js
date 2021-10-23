@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import firebase from "firebase/compat";
+import {Provider as ReduxProvider} from "react-redux";
+import configureStore from "./Redux/Store";
 
 
 
@@ -22,13 +24,16 @@ const app = firebase.initializeApp(firebaseConfig);
 const firestoreDb =  firebase.firestore();
 
 
-
+const store = configureStore();
 
 
 ReactDOM.render(
+
+    <ReduxProvider store={store}>
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+    </ReduxProvider>,
   document.getElementById('root')
 );
 
