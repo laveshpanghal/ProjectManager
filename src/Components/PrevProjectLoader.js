@@ -83,16 +83,13 @@ firestoreDb.collection('projects').doc(value.id).get().then((doc)=>{
 
                 <div className="container flex flex-col mx-auto items-center justify-center">
 
-
-
-
                 {events.map((value, key) => {
                     return (
                         <div className='w-full'>
 
 
-                            <ul className="flex flex-col">
-                                <li className="border-gray-400 flex flex-row mb-2">
+                            <ul className="flex flex-col items-center ">
+                                <li className="border-gray-400 w-1/2 justify-center flex flex-row  mb-2">
                                     <div
                                         className="transition duration-500 shadow ease-in-out transform hover:-translate-y-1 hover:shadow-lg select-none  bg-primary dark:bg-gray-800 rounded-md flex flex-1 items-center p-4">
 
