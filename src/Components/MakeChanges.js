@@ -147,7 +147,7 @@ const MakeChanges = ({ SetProjectData,projectData,}) => {
             "name": temp,
             "description":temp1
 
-        }).then(()=>{alert('changes made')}).then(()=>{history.push('/Home')})
+        }).then(()=>{alert('changes made')}).then(()=>{history.push('/')})
     }
 
 
@@ -236,7 +236,7 @@ const MakeChanges = ({ SetProjectData,projectData,}) => {
 
 
             setTimeout(() => {
-                history.push('/Home')
+                history.push('/')
 
             }, 4870)
 

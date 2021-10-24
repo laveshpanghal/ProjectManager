@@ -81,7 +81,7 @@ const GetProject = ({projectData}) => {
                                     <div className="flex py-2 mb-4 w-full">
                                         <div>
                                             <p className="text-lg font-bold tracking-tight text-black cursor-pointer" onClick={()=>{
-                                                history.push('/Home')
+                                                history.push('/')
 
                                             }}>Back to Projects</p>
                                             <p className="text-lg font-normal tracking-tight text-gray-600"> </p>

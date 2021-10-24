@@ -166,7 +166,7 @@ const[isNotloading,setIsNotloading ] =useState(true)
 
 
             setTimeout(() => {
-                history.push('/Home')
+                history.push('/')
 
             }, 4870)
 

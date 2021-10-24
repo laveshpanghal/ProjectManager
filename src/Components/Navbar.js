@@ -21,7 +21,7 @@ const Navbar = ({}) => {
         },
 
         {
-            path: "/Home",
+            path: "/",
             main: () => <h3 className='font-medium'>Projects</h3>,
             exact: true,
             strict: true,
@@ -72,7 +72,7 @@ const Navbar = ({}) => {
                             <NavLink
                                      className="mr-2 md:ml-16 font-semibold text-base md:text-lg hover:text-blue-400"
                                      activeClassName=" md:border-8 border-indigo-400   md:font-normal md:rounded-2xl  "
-                                     to="/Home"
+                                     to="/"
                             >
                                 Projects
                             </NavLink>
@@ -90,13 +90,13 @@ const Navbar = ({}) => {
                 </div>
             </nav>
             {toggle ? (
-                <div className="inset-0 top-16 w-1/2 z-10 absolute bg-white">
+                <div className="inset-0 top-16 w-1/2 z-10 absolute bg-primary">
 
                         <div className="flex flex-col items-start justify-center leading-8 tracking-wide w-full">
                             <NavLink
                                      className="w-full mr-2 font-semibold text-base md:text-lg hover:text-blue-400 px-6 py-2"
                                      activeClassName="md:text-lg py-2 px-4 md:py-2 md:px-6 md:font-medium text-white bg-indigo-600 hover:bg-indigo-700"
-                                     to="/Home"
+                                     to="/"
                             >
                               Projects
                             </NavLink>
