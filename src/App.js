@@ -7,6 +7,7 @@ import PrevProjectLoader from "./Components/PrevProjectLoader";
 import Navbar from "./Components/Navbar";
 import AddProject from "./Components/AddProject";
 import GetProject from "./Components/GetProject";
+import MakeChanges from "./Components/MakeChanges";
 function App() {
   return (
 
@@ -17,6 +18,7 @@ function App() {
           <Route exact path="/Home" exact component={LandingPage}/>
           <Route exact path="/AddProject" exact component={AddProject}/>
           <Route exact path="/Projects/:id" exact component={GetProject}/>
+          <Route exact path="/Projects/:id/makeChanges" exact component={MakeChanges}/>
 
 
 

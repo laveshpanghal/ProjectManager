@@ -2,9 +2,11 @@ import React, {useEffect, useState} from "react";
 import {useParams, useHistory} from "react-router-dom";
 import firestoreDb from "../index";
 import firebase from "firebase/compat";
-import {getStorage, ref, uploadBytesResumable, getDownloadURL} from "firebase/storage"
+import {getStorage, ref, uploadBytesResumable, getDownloadURL,deleteObject} from "firebase/storage"
 import {connect} from "react-redux";
 import {SetProjectData} from "../Redux/Actions/ProjectDataAction";
+
+
 
 
 const PrevProjectLoader = ({SetProjectData}) => {
@@ -36,6 +38,7 @@ const PrevProjectLoader = ({SetProjectData}) => {
     }
 
     const storage = getStorage();
+    var storageis = firebase.storage();
 
     const viewClick = (value)=>{
 
@@ -47,26 +50,17 @@ firestoreDb.collection('projects').doc(value.id).get().then((doc)=>{
 
 })
 
-
-
-
-
-
     }
 
 
     const Delete = (value)=>{
+        console.log(value)
+        const storageRef = storageis.refFromURL(value.data().downloadURL)
+        // const storageRef = ref(storage, "/ProjectImages/"+value.data().name +"/" + "gg.jpg")
 
-        const storageRef = ref(storage, "/ProjectImages/"+value.name+"/" + ".jpg")
-        var desertRef = storageRef.child('images/desert.jpg');
+            deleteObject(storageRef)
 
-
-
-        desertRef.delete().then(() => {
-
-        }).catch((error) => {
-
-        }).then(()=>{  firestoreDb.collection('projects').doc(value.id).delete().then(()=>{
+     .then(()=>{  firestoreDb.collection('projects').doc(value.id).delete().then(()=>{
 
             window.location.reload()}
         )})
