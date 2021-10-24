@@ -1,6 +1,6 @@
 import React from "react";
 import {useHistory} from "react-router-dom";
-
+import { withRouter } from "react-router-dom";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import LandingPage from "./Components/LandingPage";
 import Navbar from "./Components/Navbar";
@@ -13,10 +13,10 @@ function App() {
       <Router >
         <Navbar/>
         <Switch>
-            <Route exact path="/"  component={LandingPage}/>
-          <Route exact path="/AddProject"  component={AddProject}/>
-          <Route exact path="/Projects/:id"  component={GetProject}/>
-          <Route exact path="/Projects/:id/makeChanges" component={MakeChanges}/>
+            <Route exact path="/"  component={withRouter(LandingPage)}/>
+          <Route exact path="/AddProject"  component={withRouter(AddProject)}/>
+          <Route exact path="/Projects/:id"  component={withRouter(GetProject)}/>
+          <Route exact path="/Projects/:id/makeChanges" component={withRouter(MakeChanges)}/>
 
 
 
