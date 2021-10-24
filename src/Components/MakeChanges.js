@@ -260,6 +260,9 @@ const MakeChanges = ({ SetProjectData,projectData,}) => {
     return (
 
         <div>
+            <img className=' h-44 !important mt-16  w-48 bg-back animate-bounce '  src={"https://cerebro.iiitvadodara.ac.in/media/Group%20105@3x.png"}/>
+
+
         {events ? (
 
             <div>

@@ -191,7 +191,9 @@ const[isNotloading,setIsNotloading ] =useState(true)
         <div>
 
 
-                <div className=" items-center justify-center px-5 py-12 lg:px-20" hidden={!isNotloading}>
+                <div className=" items-center justify-center px-5 py-8 lg:px-20" hidden={!isNotloading}>
+                    <img className=' h-44 !important mt-2  w-48 bg-back animate-bounce '  src={"https://cerebro.iiitvadodara.ac.in/media/planet-elements-05.svg"}/>
+
                     <form className="flex flex-col w-full p-10 px-8 pt-6 mx-auto my-6 mb-4 transition duration-500 ease-in-out transhtmlForm bg-white border rounded-lg lg:w-1/2 ">
                         <section className="flex flex-col w-full h-full p-1 overflow-auto">
                             <label htmlFor="name" className="text-base leading-7 text-blueGray-500 mb-5">Project Image</label>

@@ -11,7 +11,7 @@ import MakeChanges from "./Components/MakeChanges";
 function App() {
   return (
 
-      <Router>
+      <Router >
         <Navbar/>
         <Switch>
           {/*<Route exact path="/" component={HomePage}/>*/}

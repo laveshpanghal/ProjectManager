@@ -55,35 +55,44 @@ const GetProject = ({projectData}) => {
 
 
 
-        <div classNameName="overflow-hidden shadow-lg rounded-lg h-90 w-60 md:w-80 cursor-pointer m-auto">
+        <div >
 
             {events  ? (
-                   
-                    <section className="font-mono bg-white container mx-auto px-5">
-                        <div className="flex flex-col items-center py-8">
-                            <div className="flex flex-col w-full mb-12 text-left">
+
+
+                <section className="font-mono  container mx-auto px-5  bg-back  rounded-3xl  ">
+                    <h1 className="mx-auto mb-6 text-2xl pt-4 text-left!important font-semibold text-white  lg:text-3xl">{events.name}</h1>
+                        <div className="flex flex-col  py-8 ">
+                            <div className="flex flex-col w-full mb-12 text-left ">
                                 <div className="w-full mx-auto lg:w-1/2">
-                                    <h1 className="mx-auto mb-6 text-2xl font-semibold text-black lg:text-3xl">{events.name}</h1>
-                                    <img className="rounded-sm" src={events.downloadURL} />
-                                    <h2 className="mx-auto mt-4 mb-4 text-xl font-semibold text-black">Project Description:</h2>
-                                    <p className="mx-auto text-base font-medium leading-relaxed text-gray-800">{events.description}</p>
+                                    <img className=" rounded rounded border-4 border-purple-200" src={events.downloadURL} />
+
+                                    <br/>
+
+                                    <div className='bg-back rounded-3xl  '>
+                                    <h2 className="mx-auto pl-2 text-white mt-4 mb-4 text-xl font-semibold text-black">Project Description:</h2>
+                                        <br/>
+                                    <p className="mx-auto pl-2 text-white  font-medium leading-relaxed ">{events.description}</p></div>
                                 </div>
 <br/>
+
+                                <img className="  h-64 w-64 bg-back" src={"https://cdn-icons-png.flaticon.com/512/2909/2909678.png"}/>
                                 <div className="p-4 mt-4 bg-white border rounded-lg w-full mx-auto lg:w-1/2">
                                     <div className="flex py-2 mb-4 w-full">
                                         <div>
-                                            <p className="text-sm font-semibold tracking-tight text-black cursor-pointer" onClick={()=>{
+                                            <p className="text-lg font-bold tracking-tight text-black cursor-pointer" onClick={()=>{
                                                 history.push('/Home')
 
                                             }}>Back to Projects</p>
-                                            <p className="text-sm font-normal tracking-tight text-gray-600"> </p>
+                                            <p className="text-lg font-normal tracking-tight text-gray-600"> </p>
                                         </div>
                                     </div>
-                                    <span  className="w-full inline-block px-4 py-2  cursor-pointer mt-4 text-white transition duration-500 ease-in-out transform bg-blue-500 border-blue-500 rounded-md focus:shadow-outline focus:outline-none hover:bg-blue-700" onClick={()=>{makeChanges()}}> Make Changes</span>
+                                    <span  className="w-full font-xl inline-block px-4 py-2  cursor-pointer mt-4 text-white transition duration-500 ease-in-out transform bg-blue-500 border-blue-500 rounded-md focus:shadow-outline focus:outline-none hover:bg-blue-700" onClick={()=>{makeChanges()}}> Make Changes</span>
                                 </div>
                             </div>
                         </div>
-                    </section>
+
+                </section>
 
 
             ):
@@ -91,8 +100,8 @@ const GetProject = ({projectData}) => {
 
                     <div>
 
-                        <div classNameName=" flex justify-center items-center">
-                            <div classNameName="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-800 mt-20"> </div>
+                        <div className=" flex justify-center items-center">
+                            <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-800 mt-20"> </div>
                         </div>
                     </div>
 

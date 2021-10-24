@@ -35,7 +35,7 @@ const Navbar = ({}) => {
 
     return (
         <>
-            <nav className="mx-auto mb-6  border-b-25  rounded-br-3xl rounded-bl-3xl flex items-center justify-between py-4  bg-gray-300 rounded  border-purple-200">
+            <nav className="mx-auto mb-6  border-b-25  rounded-br-3xl rounded-bl-3xl flex items-center justify-between py-4  bg-primary rounded  border-primary">
                 <div className="pb-1 flex flex-row items-center justify-center">
           <span className="md:hidden w-8 ml-2" onClick={() => toggleMenu()}>
             <svg
