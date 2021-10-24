@@ -13,10 +13,10 @@ function App() {
       <Router >
         <Navbar/>
         <Switch>
-            <Route exact path="/" exact component={LandingPage}/>
-          <Route exact path="/AddProject" exact component={AddProject}/>
-          <Route exact path="/Projects/:id" exact component={GetProject}/>
-          <Route exact path="/Projects/:id/makeChanges" exact component={MakeChanges}/>
+            <Route exact path="/"  component={LandingPage}/>
+          <Route exact path="/AddProject"  component={AddProject}/>
+          <Route exact path="/Projects/:id"  component={GetProject}/>
+          <Route exact path="/Projects/:id/makeChanges" component={MakeChanges}/>
 
 
 
